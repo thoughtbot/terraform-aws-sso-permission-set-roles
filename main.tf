@@ -3,7 +3,7 @@ data "aws_iam_roles" "sso" {
 }
 
 locals {
-  arns = data.aws_iam_roles.sso.arns
+  arns = tolist(data.aws_iam_roles.sso.arns)
 
   arns_without_path = [
     for parts in [for arn in data.aws_iam_roles.sso.arns : split("/", arn)] :
