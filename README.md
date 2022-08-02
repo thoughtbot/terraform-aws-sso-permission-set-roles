@@ -11,7 +11,7 @@ provisioned for that permission set.
 
 ```
 module "permission_set_roles" {
-  source = "git@github.com:thoughtbot/terraform-aws-sso-permission-set-roles.git?ref=v0.1.0"
+  source = "git@github.com:thoughtbot/terraform-aws-sso-permission-set-roles.git?ref=v0.2.0"
 }
 
 data "aws_iam_policy_document" "assume_role" {
